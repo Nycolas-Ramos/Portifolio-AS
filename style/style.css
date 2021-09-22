@@ -1,0 +1,569 @@
+/* VARIÁVEIS */
+:root{
+    --amarelo : rgb(229, 255, 0);
+    --azul-escuro : #060f1b;
+    --azul-claro : #007aff;
+    --azul: #173b6c;
+    --cinza-escuro : #2c2f3f;
+}
+/* VARIÁVEIS */
+
+
+/* ScrollBar */
+::-webkit-scrollbar{
+    background:#060f1b;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(45deg, #060f1b, #3b9aff);
+    border-radius: 5px;
+}
+/* ScrollBar */
+
+
+@font-face{
+    font-family: 'PoppinsM';
+    src: url('../font/Poppins-Medium.ttf');
+}
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('../img/computer.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* Padrões */
+section{
+    background: white;
+    padding: 40px 0 25px 15px;
+    height: 100vh;
+}
+h1{
+    color:var(--azul) ;
+    font-size: 20pt;
+    font-weight: 600;
+    font-family: 'PoppinsM';
+}
+h2{
+    font-family: 'PoppinsM';
+    font-weight: normal;
+}
+p{
+    font-family: 'PoppinsM';
+    font-weight: lighter;
+}
+hr {
+    margin: 20px 0 20px 0;
+    width: 60px;
+    height: 1px;
+    border: 0px;
+    border-top: 3px solid var(--azul-claro);
+}
+.dir{
+    width: 78%;
+    height: 100vh;
+    float: right;
+}
+/* Padrões */
+
+/* Section Lateral */
+section.menu{
+    padding-top:30px ;
+    height: 100vh;
+    width:22%;
+    background: #040b14be;
+    float: left;
+    position: fixed;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.menu div.pessoal{
+    font-family: 'PoppinsM';
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.menu div.pessoal img{
+    width: 90px;
+    height: 90px;
+    border: 6px #2c2f3f solid;
+    border-radius: 50%;
+    margin-top: 0;
+}
+.menu div.pessoal p{
+    color:rgb(255, 255, 255);
+    font-size: 18pt;
+}
+div.redes-sociais{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+div.redes-sociais i{
+    color: white;
+    font-size: 30px;
+    margin: 10px 15px;
+    transition: .5s;
+}
+div.redes-sociais a{
+    transition: .2 s;
+}
+div.redes-sociais a i:hover{
+    color: #3b9aff;
+}
+div.navegacao{
+    width: 100%;
+    color: #ffffff;
+}
+div.navegacao .itens{
+    display: flex;
+    flex-direction: column;
+    padding:55px 0 0 20px;
+}
+div.navegacao .itens .item{
+    display: flex;
+    margin-bottom: 40px;
+    font-family: 'PoppinsM';
+}
+div.navegacao .itens a{
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+div.navegacao .itens a:hover{
+    color:#3b9aff;
+}
+div.navegacao .itens i{
+    font-size: 20pt;
+    margin-right: 10px;
+}
+/* Section Lateral */
+
+
+/* Botão Menu */
+i.menu{
+    color: #ffffff;
+    font-size: 24pt;
+    position: fixed !important;
+    display: none;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    text-shadow:0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+/* Botão Menu */
+
+
+/* Section Home */
+.home{
+    background: #040b1494;
+}
+.home p{
+    color: white;
+    font-family: 'PoppinsM';
+    font-weight: 900;
+    font-size: 50pt;
+    margin-top: 35vh;
+    margin-left: 15vw;
+
+    animation-name: deslizar;
+    animation-duration: 1s;
+}
+.home p.second{
+    margin-top: 0;
+    font-size: 20pt;
+    font-weight: 400;
+}
+/* Section Home */
+
+
+/* Section About*/
+.about{
+    height: auto;
+}
+.about p{
+    font-weight: lighter;
+}
+
+.about .spec{
+    margin-top:30px ;
+    display: flex;
+    align-items: center;
+}
+.about .spec img{
+    margin-right: 50px;
+    margin-bottom: 15px;
+    height: 300px;
+    max-width: 300px;
+}
+
+.about .spec .text i{
+    color: var(--azul-claro);
+    margin-right: 5px;
+}
+.text .content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.text .content p.left{
+    margin-right: 10px;
+}
+.text .content p{
+    line-height: 40px;
+}
+.text .content span.i1{
+    font-weight: bold;
+}
+/* Section About*/
+
+
+/* Section Skills*/
+.skills{
+    height: auto;
+}
+.skill-group{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+    padding: 0;
+    margin: 0;
+}
+.skill-group .skill{
+    text-align: center;
+    margin: 5px 20px;
+}
+.skill-group .skill p{
+    font-size: 15pt;
+    color: var(--azul);
+    font-weight: bold;
+}
+.skill-group .skill .porc{
+    display: flex;
+}
+.skill-group .skill .porc p{
+    margin-right: 10px;
+    font-size: 20pt;
+}
+.skill-group .skill .porc div{
+    height: 40px;
+    width: 302px;
+    border: 1px solid var(--azul-claro);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.skill-group .skill .porc div .preenchimento{
+    background: linear-gradient(to right ,#007aff,blue);
+    height: 34px;
+    border-radius: 10px;
+    width: 50%;
+}
+.skill-group .skill .porc div .oitenta{
+    width: 80%;
+}
+.skill-group .skill .porc div .setenta{
+    width: 70%;
+}
+.skill-group .skill .porc div .sessenta{
+    width: 60%;
+}
+.skill-group .skill .porc div .trinta{
+    width: 30%;
+}
+/* Section Skills*/
+
+
+/* Section Contato*/
+ section.contato{
+     height: auto;
+     display: flex;
+     flex-direction: column;
+ }
+ .contato .group{
+     width: 100%;
+     display: flex;
+     justify-content: space-evenly;
+     flex-wrap: wrap;
+ }
+.contato .cont-map{
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    height: 630px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.contato .cont-map .cont{
+    display: flex;
+    margin-bottom:20px ;
+}
+.contato .cont-map .cont .text p{
+    color: #007aff;
+    font-weight: lighter;
+    font-size: 11pt;
+    margin-top: -5px;
+}
+.contato .cont-map .cont i{
+    color: var(--azul-claro);
+    font-size:25pt ;
+    padding: 10px;
+    margin-right: 15px;
+}
+.contato .cont-map iframe{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    height: 400px;
+    width: 100%;
+    margin: auto;
+    border: none;
+}
+.group .men{
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    height: 630px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.group .men form{
+    display: flex;
+    flex-direction: column;
+}
+.group .men form p{
+    color: #007aff;
+    font-size: 16pt;
+}
+.group .men form input,textarea{
+    height: 40px;
+    border: 1px solid #2c2f3f63;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 15pt;
+    font-family: 'PoppinsM';
+    color: #007bffb7;
+}
+.group .men form input:focus,textarea:focus{
+    box-shadow: 0 0 0 0;
+    border: 1px solid #007aff;
+    outline: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.group .men form textarea{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 300px;
+    max-height: 380px;
+}
+.group .men button{
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 15pt;
+    font-family: 'PoppinsM';
+    border: none;
+    background: #007aff;
+    margin: 10px auto;
+    transition: .4s;
+    cursor: pointer;
+}
+.group .men button:hover{
+    background: #3b9aff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+/* Section Contato*/
+
+
+/* Section Servico */
+section#servicos{
+    height: auto;
+    overflow-x: hidden;
+}
+.group-s{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.group-s .servico-single{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-top:35px ;
+
+    min-height: 150px;
+    width: 45%;
+}
+.group-s .servico-single i{
+    font-size: 30pt;
+    color: #3b9aff;
+    margin-right: 30px;
+}
+.group-s .servico-single .text-s{
+    display: flex;
+    flex-direction: column;
+}
+.group-s .servico-single .text-s p.t{
+    font-size: 14pt;
+    color: var(--cinza-escuro);
+    font-weight:600;
+    margin-bottom: 10px;
+
+}
+.group-s .servico-single .text-s p.p{
+    font-size: 10pt;
+    font-weight: 100;
+    color: var(--cinza-escuro);
+}
+/* Section Servico */
+
+
+/* Footer */
+footer{
+    height: 100px !important;
+    background: var(--azul-escuro);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+}
+/* Footer */
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .about .spec{
+        flex-direction: column;
+    }
+
+    .contato .group{
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .contato .group .cont-map{
+        width: 90vw;
+    }
+    .contato .group .men{
+        width: 90vw;
+    }
+  }
+
+@media (max-width: 900px) {
+
+    .group-s .servico-single{
+        min-width: 90%;
+    }
+
+    section.show{
+        width: 300px;
+        animation-name: aparecer;
+        animation-duration: .5s;
+    }
+    section.hide{
+        width: 300px;
+        animation-name: desaparecer;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+
+    i.menu{
+        display: inline;
+    }
+    section.skills{
+        height: auto !important;
+    }
+    /* .skill-group{
+        height: auto;
+        background: blue;
+    } */
+
+    .dir{
+        width: 100%;
+        height: 100vh;
+        float: center;
+
+    }
+    section.skills{
+        height: 100vh;
+    }
+  }
+@media (min-width: 900px){
+    section.menu{
+        display: inline;
+    }
+  }
+
+
+
+
+/* Keyframes */
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+        left: -200px;
+    }
+    100%{
+        opacity: 1;
+        left: 0px;
+    }
+}
+@keyframes desaparecer{
+    0%{
+        opacity: 1;
+        left: 0;
+    }
+    100%{
+        opacity: 0;
+        left: -200px;
+    }
+}
+/* Keyframes */
+
+
+
+/* Animação dos elementos */
+[data-anima]{
+    transition: .5s;
+    opacity: 0;
+}
+[data-anima="right"]{
+    transform: translate3d(50px, 0, 0);
+}
+[data-anima="left"]{
+    transform: translate3d(-50px, 0, 0);
+}
+[data-anima].animate{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+/* Animação dos elementos */
